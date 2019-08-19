@@ -1,5 +1,5 @@
-let prev = document.querySelector('.slider__btn_prev');
-let next = document.querySelector('.slider__btn_next');
+let prev = document.querySelector('[data-slider-btn-prev]');
+let next = document.querySelector('[data-slider-btn-next]');
 let dots = document.querySelectorAll('.slider__indicate');
 let slides = document.querySelectorAll('.slider__item');
 

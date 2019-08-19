@@ -1,13 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="gm">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Prof. Dr. Jochem Müller</title>
+    <link href="https://fonts.googleapis.com/css?family=Hind+Vadodara&display=swap" rel="stylesheet">
+    <script src="https://use.fontawesome.com/6d8b57cb01.js"></script>
     <link rel="stylesheet" href="./src/css/style.css">
 </head>
 <body>
-    
+    <div class="container">
+        <div class="container__header header">
+            <h1 class="header__title">Prof. Dr. Jochem Müller</h1>
+            <nav class="header__nav">
+                <button class="header__hamburger hamburger hamburger_emphatic" type="button">
+                    <span class="hamburger__box">
+                        <span class="hamburger__inner"></span>
+                    </span>
+                </button>
+                <ul class="header__nav-list">
+                    <li class="header__nav-item"><a class="header__nav-link header__nav-link">Aktuelles</a></li>
+                    <li class="header__nav-item"><a class="header__nav-link">Projekte</a></li>
+                    <li class="header__nav-item"><a class="header__nav-link">Studierende</a></li>
+                    <li class="header__nav-item"><a class="header__nav-link">Unternehmen</a></li>
+                    <li class="header__nav-item"><a class="header__nav-link">Zur Person</a></li>
+                    <li class="header__nav-item"><a class="header__nav-link">Abschlussarbeiten</a></li>
+                    <li class="header__nav-item"><a class="header__nav-link">Kontalt</a></li>
+                </ul>
+            </nav>
+        </div>
+        <section class="container__blog blog blog_top">
+            <img class="blog__picture" src="./src/images/img1.png" alt="photo">
+            <article class="blog__text-block blog__text-block_left">
+                <h3 class="blog__title">Biografie</h3>
+                <p class="blog__text">Prof. Dr. Jochem Müller wurde 1964 in Oberrodach / Bayern geboren.</p>
+                <p class="blog__text">
+                    Das Geburtsjahr war nach dem chinesischen Horoskop das Jahr des Drachens. Der Drache ist in China 
+                    eines der stärksten Glückssymbole überhaupt.Menschen, die im Zeichen des Drachen geboren sind, sind gesund, 
+                    energiegeladen und führungsstark.
+                </p>
+                <p class="blog__text">
+                    Er studierte von 1982 bis 1986 Betriebswirtschaftslehre an der Fachhochschule Coburg. Studienschwerpunkte: 
+                    Organisation und Datenverarbeitung (Prof. Dr. Winkler) und Rechnungswesen (Prof. Dr. Kalweit).
+                </p>
+                <p class="blog__text">
+                    Hochbegabtenförderung der Bayerischen Staatsregierung und Stipendiat der Hanns-Seidel-Stiftung.
+                </p>
+            </article>
+        </section>
+
+        <div class="container__slider slider">
+            <div class="slider__item fade">
+                <img src="./src/images/slider1.png" alt="banner" class="slider__img">
+            </div>
+            <div class="slider__item fade">
+                <img src="./src/images/img5.jpg" alt="banner" class="slider__img">
+            </div>
+            
+            <a class="slider__btn slider__btn_prev slider__btn_hover">&#10094;</a>
+            <a class="slider__btn slider__btn_next slider__btn_hover">&#10095;</a>
+            <div class="slider__indicate-box">
+                <span class="slider__indicate slider__indicate_hover"></span>
+                <span class="slider__indicate slider__indicate_hover"></span>
+            </div> 
+        </div>
+        
+
+
+        <section class="container__blog blog blog_bottom">
+            <article class="blog__text-block blog__text-block_right">
+                <h3 class="blog__title">Preise</h3>
+                <p class="blog__text">
+                    11/2008 Verleihung "Zertifikat Dozent für Weiterbildung an Hochschulen".
+                </p>
+                <p class="blog__text">
+                    2010 Gründung des MBA-Studienganges "Kreatives Marketing Management".
+                </p>
+                <p class="blog__text">
+                    2010 Leitung des ESF-Forschungsprojektes TINA
+                </p>
+                <p class="blog__text">
+                    2011 Leitung des Transferzentrums für Innovation und Nachhaltigkeit (TINA)
+                </p>
+            </article>
+            <img class="blog__picture" src="./src/images/img2.png" alt="photo">
+        </section>
+        <footer class="container__footer footer">
+            <h4 class="footer__title">Datenschutz Impressum</h4>
+            
+            <ul class="footer__nav">
+                <li class="footer__item"><i class="fa fa-mobile footer__item-img footer__item-img_first" aria-hidden="true"></i><span class="footer__item-text">0 9 8 1 / 48 77 231</span></li>
+                <li class="footer__item"><i class="fa fa-envelope footer__item-img footer__item-img_second" aria-hidden="true"></i><span class="footer__item-text">Jochem.mueller@hs-ansbach.de</span></li>
+                <li class="footer__item"><i class="fa fa-home footer__item-img footer__item-img_third" aria-hidden="true"></i><span class="footer__item-text">FH Ansbach Residenzstr, 8 91522 Ansbach</span></li>
+            </ul>
+        </footer>
+    </div>
+    <script src="./src/scripts/hamburger.js"></script>
+    <script src="./src/scripts/slider.js"></script>
 </body>
 </html>

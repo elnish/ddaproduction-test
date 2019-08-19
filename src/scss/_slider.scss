@@ -1,0 +1,94 @@
+.slider {
+    width: 100%;
+    position: relative;
+    &__img {
+        width: 100%;
+        max-height: 395px;
+        object-fit: cover;
+    }
+    &__item {
+        display: none;
+    }
+    &__btn {
+        cursor: pointer;
+        width: auto;
+        padding: 9px 18px;
+        border-radius: 50%;
+        color: rgba(255, 255, 255, .3);
+        background-color: $btnBgColor;
+        font-weight: 300;
+        font-size: 18px;
+        transition: 0.6s ease;
+        user-select: none;
+        margin-top: -22px;
+        &_prev {
+            position: absolute;
+            left: 8%;
+            top: 50%;
+        }
+        &_next {
+            position: absolute;
+            right: 8%;
+            top: 50%;
+        }
+        &_hover {
+            &:hover {
+                background-color: $secondBgColor;
+                color: $mainBgColor;
+            }
+        }
+    }
+    &__indicate-box {
+        position: absolute;
+        left: 45%;
+        bottom: 5%;
+    }
+    &__indicate {
+        cursor: pointer;
+        height: 20px;
+        width: 20px;
+        margin: 0 2px;
+        background-color: $borderColor;
+        border: 5px solid $hoverColor;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color .6s ease,  border .6s ease;
+        &_current, &_hover:hover {
+            background-color: $hoverColor;
+            border: 5px solid $borderColor;
+        }
+    }
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+
+@media (min-width: 1200px) and (max-width: 1920px) {
+    .slider {
+        &__btn {
+            font-size: 25px;
+            padding: 12px 22px;
+        }
+        &__indicate {
+            cursor: pointer;
+            height: 25px;
+            width: 25px;
+        }
+    }  
+}
+

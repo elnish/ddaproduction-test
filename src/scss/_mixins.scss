@@ -1,0 +1,17 @@
+@mixin displayFlex($direction, $justifyCont, $alignItems) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justifyCont;
+    align-items: $alignItems;
+}
+
+@mixin inner {
+    width: 40px;
+    height: 4px;
+    background-color: $mainBgColor;
+    border-radius: 4px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease;
+}

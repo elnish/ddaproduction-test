@@ -3,7 +3,7 @@
     height: auto;
     background-color: $secondBgColor;
     color: $mainBgColor;
-    padding: 20px 8%;
+    padding: 20px 8% 50px;
     &__title {
         font-size: 44px;
         font-weight: 100;
@@ -19,7 +19,8 @@
         cursor: pointer;
         &:before {
             content: '';
-            width: 0;
+            width: 100%;
+            transform: scaleX(0);
             height: 1px;
             background: $mainBgColor;
             position: absolute;
@@ -28,12 +29,14 @@
             transition: all .5s ease;
         }
     }
-    &__nav-item:hover &__nav-link:before {
-        width: 100%;
+    &__nav-link:hover {
+        &:before {
+            transform: scaleX(1);
+        }    
     }
 }
 
-@media (min-width: 1200px) and (max-width: 1920px) {
+@media (min-width: 1200px) {
     .header {
         &__title {
             font-size: 54px;
@@ -45,20 +48,7 @@
     }    
 }
 
-@media only screen and (max-width: 920px) {
-    .header {
-        &__nav-list {
-            font-size: 18px;
-            font-weight: 100;
-            letter-spacing: .2px;
-        }
-        &__nav-item {
-            margin-right: 7px;
-        }
-    }
-}
-
-@media only screen and (max-width: 820px) {
+@media only screen and (max-width: 992px) {
     .header {
         position: relative;
         &__title {
@@ -87,7 +77,7 @@
     }
 }
 
-@media only screen and (max-width: 415px) {
+@media only screen and (max-width: 576px) {
     .header {
         &__title {
             font-size: 30px;

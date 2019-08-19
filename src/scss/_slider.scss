@@ -3,24 +3,21 @@
     position: relative;
     &__img {
         width: 100%;
-        max-height: 395px;
+        height: 395px;
         object-fit: cover;
-    }
-    &__item {
-        display: none;
     }
     &__btn {
         cursor: pointer;
-        width: auto;
-        padding: 9px 18px;
+        width: 60px;
+        height: 60px;
         border-radius: 50%;
         color: rgba(255, 255, 255, .3);
         background-color: $btnBgColor;
-        font-weight: 300;
-        font-size: 18px;
+        font-size: 40px;
         transition: 0.6s ease;
         user-select: none;
         margin-top: -22px;
+        @include displayFlex(row, center, center);
         &_prev {
             position: absolute;
             left: 8%;
@@ -61,10 +58,8 @@
 }
 
 .fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
     animation-name: fade;
-    animation-duration: 1.5s;
+    animation-duration: .5s;
 }
 
 @-webkit-keyframes fade {
@@ -78,12 +73,8 @@
 }
 
 
-@media (min-width: 1200px) and (max-width: 1920px) {
+@media (min-width: 1200px) {
     .slider {
-        &__btn {
-            font-size: 25px;
-            padding: 12px 22px;
-        }
         &__indicate {
             cursor: pointer;
             height: 25px;
@@ -92,3 +83,10 @@
     }  
 }
 
+@media only screen and (max-width: 768px) {
+    .slider {
+        &__img {
+            height: 495px;
+        }
+    }       
+}
